@@ -79,6 +79,12 @@ class MancalaGame:
         # Disallow moves from pits 6 and 13
         if pit_index == 6 or pit_index == 13:
             raise InvalidMoveError("Cannot move from Mancala pit.")
+        
+        # Disallow moves from the opponent's pits
+        if self.current_player == 1 and pit_index > 5:
+            raise InvalidMoveError("Cannot move from opponent's pit.")
+        if self.current_player == 2 and pit_index < 7:
+            raise InvalidMoveError("Cannot move from opponent's pit.")
 
         # Get the number of stones in the selected pit
         stones = self.board[pit_index]
