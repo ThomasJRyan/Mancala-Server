@@ -7,5 +7,5 @@ services:
       - 8000:9111
     restart: unless-stopped
   networks:
-    mancala-network:
+    mancala_network:
       driver: bridge
