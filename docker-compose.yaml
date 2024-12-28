@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8000:9111
+      - 9111:9111
     restart: unless-stopped
 networks:
   mancala_network:
