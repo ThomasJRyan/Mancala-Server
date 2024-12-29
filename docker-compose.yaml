@@ -1,7 +1,7 @@
 services:
   mancala-server:
     build: .
-    pull_policy: always
+    pull_policy: build
     ports:
       - 9111:9111
     restart: unless-stopped

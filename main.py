@@ -121,7 +121,7 @@ async def get_game(game_id: str) -> GameState:
         game_id=game_id,
         board=game.board,
         current_player=game.current_player,
-        winner=await game.get_winner(),,
+        winner=await game.get_winner(),
         last_move=game.last_move,
     )
 
