@@ -1,8 +1,7 @@
 services:
   mancala-server:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
+    pull_policy: always
     ports:
       - 9111:9111
     restart: unless-stopped
