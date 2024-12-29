@@ -18,3 +18,4 @@ class GameState(BaseModel):
     board: List[int] = [4] * 6 + [0] + [4] * 6 + [0]
     current_player: int
     winner: Optional[int] = None
+    last_move: Optional[int] = None

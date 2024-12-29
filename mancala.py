@@ -29,6 +29,7 @@ class MancalaGame:
         self.player2 = player2
 
         self.event = asyncio.Event()
+        self.last_move = None
 
     def __str__(self):
         """
@@ -88,6 +89,8 @@ class MancalaGame:
 
         # Get the number of stones in the selected pit
         stones = self.board[pit_index]
+        self.last_move = pit_index
+        
         # Remove all stones from the selected pit
         self.board[pit_index] = 0
 
