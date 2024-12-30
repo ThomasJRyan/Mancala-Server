@@ -154,6 +154,7 @@ async def watch_game(game_id: str) -> GameState:
                         "winner": await game.get_winner(),
                         "player1_score": game.player1_score,
                         "player2_score": game.player2_score,
+                        "game_board": game.board,
                     }
                 )
                 yield f"data: {data}\n\n"
